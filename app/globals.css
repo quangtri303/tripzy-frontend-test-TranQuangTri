@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 @theme inline {
   --color-background: var(--background);
@@ -12,15 +8,29 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-h1 {
+  @apply font-semibold font-sans;
+  font-size: 40px;
+  line-height: 100%;
+}
+.text-h3 {
+  @apply font-medium font-sans;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.custom-input .ant-input-prefix {
+  margin-right: 8px;
+  margin-left: 4px;
+}
+
+[type='checkbox']:checked {
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"/></svg>');
 }
