@@ -1,13 +1,11 @@
 @import "tailwindcss";
 
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
 
 body {
   background: var(--background);
@@ -26,11 +24,39 @@ body {
   line-height: 16px;
 }
 
-.custom-input .ant-input-prefix {
+.text-location {
+  @apply font-semibold font-sans;
+  font-size: 14px;
+  line-height: 100%;
+}
+.text-code-state {
+  @apply font-semibold font-sans;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.custom-input .ant-select-prefix,
+.custom-input .ant-input-prefix,
+.custom-input .ant-picker-prefix {
   margin-right: 8px;
   margin-left: 4px;
 }
 
-[type='checkbox']:checked {
-  background-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"/></svg>');
+.custom-input.ant-picker-disabled {
+  background-color: #2426281a !important;
+  opacity: 1 !important;
+  color: #cccfd5 !important;
+}
+
+.custom-input.ant-picker-disabled .ant-picker-input > input {
+  color: #cccfd5 !important;
+}
+
+.custom-input.ant-picker-disabled .ant-picker-prefix {
+  opacity: 0.6;
+}
+
+.custom-input.ant-select .ant-select-selector {
+  border-radius: 8px;
+  border: 1px solid #cccfd5;
 }
